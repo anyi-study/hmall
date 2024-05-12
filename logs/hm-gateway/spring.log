@@ -1,0 +1,274 @@
+16:56:47:018  INFO 17788 --- [main] com.hmall.gateway.GatewayApplication     : No active profile set, falling back to 1 default profile: "default"
+16:56:47:594  INFO 17788 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ab7eba3b-bca4-35ba-8e37-4bef2229baa0
+16:56:47:630  INFO 17788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:56:47:630  INFO 17788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:56:47:632  INFO 17788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:56:48:109 DEBUG 17788 --- [main] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，[
+    {
+        "id": "item",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/items/**", "_genkey_1":"/search/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-item-service"
+    },
+    {
+        "id": "cart",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/carts/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-cart-service"
+    },
+    {
+        "id": "user",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/users/**", "_genkey_1":"/addresses/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-user-service"
+    },
+    {
+        "id": "trade",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-trade-service"
+    },
+    {
+        "id": "pay",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/pay-orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-pay-service"
+    }
+]
+16:56:49:428  INFO 17788 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:56:50:554  INFO 17788 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+16:56:50:782  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+16:56:50:783  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+16:56:50:783  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+16:56:50:783  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+16:56:50:783  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+16:56:50:783  INFO 17788 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+16:56:51:996  INFO 17788 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:56:52:140  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 6a6e4974-413b-4618-ae73-7fe09e666d0e
+16:56:52:141  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] RpcClient init label, labels = {module=naming, source=sdk}
+16:56:52:142  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+16:56:52:142  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+16:56:52:142  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+16:56:52:143  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Try to connect to server on start up, server: {serverIp = '192.168.150.129', server main port = 8848}
+16:56:52:258  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Success to connect to server [192.168.150.129:8848] on start up, connectionId = 1715504212490_192.168.150.1_8586
+16:56:52:258  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+16:56:52:258  INFO 17788 --- [main] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$461/0x000000080044e040
+16:56:52:258  INFO 17788 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Notify connected event to listeners.
+16:56:52:437  INFO 17788 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+16:56:52:836  INFO 17788 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Receive server push request, request = NotifySubscriberRequest, requestId = 60
+16:56:52:838  INFO 17788 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Ack server push request, request = NotifySubscriberRequest, requestId = 60
+16:56:53:609  INFO 17788 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:56:54:723  INFO 17788 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:56:54:731  INFO 17788 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP hm-gateway 192.168.150.1:8080 register finished
+16:56:54:747  INFO 17788 --- [main] com.hmall.gateway.GatewayApplication     : Started GatewayApplication in 11.712 seconds (JVM running for 12.447)
+16:56:54:750  INFO 17788 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=hm-gateway, group=DEFAULT_GROUP
+16:56:54:751  INFO 17788 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=hm-gateway.yaml, group=DEFAULT_GROUP
+16:56:55:281  INFO 17788 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Receive server push request, request = NotifySubscriberRequest, requestId = 61
+16:56:55:285  INFO 17788 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Ack server push request, request = NotifySubscriberRequest, requestId = 61
+16:57:00:071  INFO 17788 --- [nacos-grpc-client-executor-12] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Receive server push request, request = NotifySubscriberRequest, requestId = 62
+16:57:00:071  INFO 17788 --- [nacos-grpc-client-executor-12] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Ack server push request, request = NotifySubscriberRequest, requestId = 62
+16:57:12:767  INFO 17788 --- [nacos-grpc-client-executor-17] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 63
+16:57:12:768  INFO 17788 --- [nacos-grpc-client-executor-17] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 63
+16:57:12:784 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，null
+16:58:06:997  INFO 17788 --- [nacos-grpc-client-executor-32] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 64
+16:58:06:997  INFO 17788 --- [nacos-grpc-client-executor-32] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 64
+16:58:07:012 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，[
+    {
+        "id": "item",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/items/**", "_genkey_1":"/search/**"}
+        }],
+        "filters": [],
+        "uri": "lb://item-service"
+    },
+    {
+        "id": "cart",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/carts/**"}
+        }],
+        "filters": [],
+        "uri": "lb://cart-service"
+    },
+    {
+        "id": "user",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/users/**", "_genkey_1":"/addresses/**"}
+        }],
+        "filters": [],
+        "uri": "lb://user-service"
+    },
+    {
+        "id": "trade",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://trade-service"
+    },
+    {
+        "id": "pay",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/pay-orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://pay-service"
+    }
+]
+16:58:57:025  INFO 17788 --- [nacos-grpc-client-executor-48] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 65
+16:58:57:025  INFO 17788 --- [nacos-grpc-client-executor-48] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 65
+16:58:57:035 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，[
+    {
+        "id": "item",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/items/**", "_genkey_1":"/search/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-item-service"
+    },
+    {
+        "id": "cart",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/carts/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-cart-service"
+    },
+    {
+        "id": "user",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/users/**", "_genkey_1":"/addresses/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-user-service"
+    },
+    {
+        "id": "trade",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-trade-service"
+    },
+    {
+        "id": "pay",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/pay-orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-pay-service"
+    }
+]
+16:59:01:630  WARN 17788 --- [boundedElastic-2] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: item-service
+16:59:02:190  INFO 17788 --- [nacos-grpc-client-executor-43] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Receive server push request, request = NotifySubscriberRequest, requestId = 66
+16:59:02:191  INFO 17788 --- [nacos-grpc-client-executor-43] com.alibaba.nacos.common.remote.client   : [6a6e4974-413b-4618-ae73-7fe09e666d0e] Ack server push request, request = NotifySubscriberRequest, requestId = 66
+17:00:41:207  INFO 17788 --- [nacos-grpc-client-executor-72] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 67
+17:00:41:207  INFO 17788 --- [nacos-grpc-client-executor-72] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 67
+17:00:41:215 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:00:46:219 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:00:51:220 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:00:56:223 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:01:225 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:06:226 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:11:228 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:16:230 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:21:232 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:26:234 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:31:238 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:36:239 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:41:242 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，a
+17:01:41:919  INFO 17788 --- [nacos-grpc-client-executor-88] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 68
+17:01:41:920  INFO 17788 --- [nacos-grpc-client-executor-88] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 68
+17:01:41:929 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，null
+17:02:22:510  INFO 17788 --- [nacos-grpc-client-executor-99] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 69
+17:02:22:510  INFO 17788 --- [nacos-grpc-client-executor-99] com.alibaba.nacos.common.remote.client   : [f60a0d43-9495-4c47-8232-64affdab9519_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 69
+17:02:22:522 DEBUG 17788 --- [nacos.client.cachedata.internal.notifier] c.h.gateway.route.DynamicRouteLoader     : 监听到路由配置变更，[
+    {
+        "id": "item",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/items/**", "_genkey_1":"/search/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-item-service"
+    },
+    {
+        "id": "cart",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/carts/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-cart-service"
+    },
+    {
+        "id": "user",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/users/**", "_genkey_1":"/addresses/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-user-service"
+    },
+    {
+        "id": "trade",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-trade-service"
+    },
+    {
+        "id": "pay",
+        "predicates": [{
+            "name": "Path",
+            "args": {"_genkey_0":"/pay-orders/**"}
+        }],
+        "filters": [],
+        "uri": "lb://hm-pay-service"
+    }
+]
+17:04:37:020  WARN 17788 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:04:37:020  WARN 17788 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:04:37:020  WARN 17788 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:04:37:021  WARN 17788 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:04:37:036  INFO 17788 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:04:37:047  INFO 17788 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:04:37:356  INFO 17788 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:04:37:357  INFO 17788 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@53c225d[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:04:37:357  INFO 17788 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1715504212490_192.168.150.1_8586
+17:04:37:359  INFO 17788 --- [nacos-grpc-client-executor-114] c.a.n.c.remote.client.grpc.GrpcClient    : [1715504212490_192.168.150.1_8586]Ignore complete event,isRunning:false,isAbandon=false
+17:04:37:362  INFO 17788 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@300ae993[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 115]
